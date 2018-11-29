@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-28T14:26:46.595Z</updated>
+  <updated>2018-11-29T07:09:03.706Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/11/28/hello-world/"/>
     <id>http://yoursite.com/2018/11/28/hello-world/</id>
     <published>2018-11-28T04:33:11.133Z</published>
-    <updated>2018-11-28T14:26:46.595Z</updated>
+    <updated>2018-11-29T07:09:03.706Z</updated>
     
     <summary type="html">
     
@@ -32,12 +32,12 @@
     
     </summary>
     
-      <category term="category1" scheme="http://yoursite.com/categories/category1/"/>
+      <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="tag1" scheme="http://yoursite.com/tags/tag1/"/>
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-      <category term="tag2" scheme="http://yoursite.com/tags/tag2/"/>
+      <category term="文档" scheme="http://yoursite.com/tags/%E6%96%87%E6%A1%A3/"/>
     
   </entry>
   
