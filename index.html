@@ -427,7 +427,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0 字
+                  511 字
                 </span>
               
 
@@ -465,9 +465,39 @@
 
       
         
-          
-            
-          
+          <p><img src="/2018/12/25/React学习-基于v16-7-0/react.jpeg" alt="Alt React学习笔记" title="React学习笔记"></p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>React 起源于 Facebook 的内部项目，并于2013年5月开源。更多精彩见<a href="https://reactjs.org/" title="React 官网" target="_blank" rel="noopener">React 官网</a></p>
+<p><strong>React 核心特色</strong></p>
+<ul>
+<li>声明式渲染</li>
+</ul>
+<p>先来说明一下<strong>命令式编程</strong>和<strong>声明式编程</strong>：<br><strong>命令式编程关注怎么做</strong>，通俗点说就是我们通过一行一行代码让机器照着一步一步的去做。例如我有一个数组，然后想通过它得到每个值都是它的只两倍的数组：</p>
+<pre><code>const originArr = [1,2,3]; // 原始数组
+const resultArr = []; // 定义一个空数组
+for(let i = 0;i &lt; originArr.length;i++){ // 遍历原始数组，然后将每个值乘于2之后添加到空数组中
+    resultArr.push(originArr[i] * 2)
+}
+</code></pre><p><strong>声明式编程关注做什么</strong>，就是我们的目的。同样的例子适用声明式编程：</p>
+<pre><code>const originArr = [1,2,3]; // 原始数组
+const resultArr = originArr.map(item =&gt; item * 2); // 遍历数组由map方法代为实现，而我们只需要关注我们要做什么：即把每个值乘于2
+</code></pre><p>那么react的声明式渲染体现在什么地方呢？简单点说就是react独创的<strong>JSX</strong>语法，一种把html和js结合起来的成果，例如：</p>
+<pre><code>const title = &lt;h3&gt;This is a title&lt;/h3&gt; ; 
+</code></pre><p>上述代码中<code>&lt;h3&gt;This is a title&lt;/h3&gt;</code> 既非html也非字符串，我们可以叫它react element，实际上它在被react渲染成真实DOM之前只是一个普通的js对象，后面会有介绍。<br>React使用JSX语法让我们只需要是关注我们想要做什么，输入的state或者props，输出的UI界面，而不用分心关注于原生的DOM操作。</p>
+<ul>
+<li>组件化</li>
+</ul>
+<p>在React中一切皆组件，组件是React中最基本的单元结构。大到整个页面，小到一个按钮或者弹窗都可以成为一个组件。</p>
+<ul>
+<li>可移植性强</li>
+</ul>
+<p>React不仅可以在web端使用，它还可以借助nodejs在server端渲染，还可以借助 React Native 开发移动端应用。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/25/React学习-基于v16-7-0/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1023,7 +1053,7 @@
     
       <span class="post-meta-item-text">站点字数统计&#58;</span>
     
-    <span title="站点字数统计">1.4k 字</span>
+    <span title="站点字数统计">1.9k 字</span>
   
 </div>
 

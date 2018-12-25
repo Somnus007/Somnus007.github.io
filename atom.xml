@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-25T08:08:23.033Z</updated>
+  <updated>2018-12-25T09:48:58.553Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,36 @@
     <link href="http://yoursite.com/2018/12/25/React%E5%AD%A6%E4%B9%A0-%E5%9F%BA%E4%BA%8Ev16-7-0/"/>
     <id>http://yoursite.com/2018/12/25/React学习-基于v16-7-0/</id>
     <published>2018-12-25T08:05:13.000Z</published>
-    <updated>2018-12-25T08:08:23.033Z</updated>
+    <updated>2018-12-25T09:48:58.553Z</updated>
     
     <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;/2018/12/25/React学习-基于v16-7-0/react.jpeg&quot; alt=&quot;Alt React学习笔记&quot; title=&quot;React学习笔记&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;React 起源于 Facebook 的内部项目，并于2013年5月开源。更多精彩见&lt;a href=&quot;https://reactjs.org/&quot; title=&quot;React 官网&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;React 官网&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;React 核心特色&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;声明式渲染&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;先来说明一下&lt;strong&gt;命令式编程&lt;/strong&gt;和&lt;strong&gt;声明式编程&lt;/strong&gt;：&lt;br&gt;&lt;strong&gt;命令式编程关注怎么做&lt;/strong&gt;，通俗点说就是我们通过一行一行代码让机器照着一步一步的去做。例如我有一个数组，然后想通过它得到每个值都是它的只两倍的数组：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const originArr = [1,2,3]; // 原始数组
+const resultArr = []; // 定义一个空数组
+for(let i = 0;i &amp;lt; originArr.length;i++){ // 遍历原始数组，然后将每个值乘于2之后添加到空数组中
+    resultArr.push(originArr[i] * 2)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;声明式编程关注做什么&lt;/strong&gt;，就是我们的目的。同样的例子适用声明式编程：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const originArr = [1,2,3]; // 原始数组
+const resultArr = originArr.map(item =&amp;gt; item * 2); // 遍历数组由map方法代为实现，而我们只需要关注我们要做什么：即把每个值乘于2
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;那么react的声明式渲染体现在什么地方呢？简单点说就是react独创的&lt;strong&gt;JSX&lt;/strong&gt;语法，一种把html和js结合起来的成果，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const title = &amp;lt;h3&amp;gt;This is a title&amp;lt;/h3&amp;gt; ; 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;上述代码中&lt;code&gt;&amp;lt;h3&amp;gt;This is a title&amp;lt;/h3&amp;gt;&lt;/code&gt; 既非html也非字符串，我们可以叫它react element，实际上它在被react渲染成真实DOM之前只是一个普通的js对象，后面会有介绍。&lt;br&gt;React使用JSX语法让我们只需要是关注我们想要做什么，输入的state或者props，输出的UI界面，而不用分心关注于原生的DOM操作。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组件化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在React中一切皆组件，组件是React中最基本的单元结构。大到整个页面，小到一个按钮或者弹窗都可以成为一个组件。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可移植性强&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;React不仅可以在web端使用，它还可以借助nodejs在server端渲染，还可以借助 React Native 开发移动端应用。&lt;/p&gt;
     
     </summary>
     
@@ -55,9 +82,9 @@
       <category term="前端" scheme="http://yoursite.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
       <category term="文档" scheme="http://yoursite.com/tags/%E6%96%87%E6%A1%A3/"/>
+    
+      <category term="博客" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
