@@ -123,7 +123,7 @@
 <meta property="og:description" content="概述React 起源于 Facebook 的内部项目，并于2013年5月开源。更多精彩见React 官网">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/12/25/React学习-基于v16-7-0/react.jpeg">
-<meta property="og:updated_time" content="2018-12-27T07:22:16.007Z">
+<meta property="og:updated_time" content="2018-12-28T08:35:42.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React学习-基于v16.7.0">
 <meta name="twitter:description" content="概述React 起源于 Facebook 的内部项目，并于2013年5月开源。更多精彩见React 官网">
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  511 字
+                  1.8k 字
                 </span>
               
 
@@ -448,7 +448,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  8 分钟
                 </span>
               
             </div>
@@ -472,11 +472,7 @@
         <p><img src="/2018/12/25/React学习-基于v16-7-0/react.jpeg" alt="Alt React学习笔记" title="React学习笔记"></p>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>React 起源于 Facebook 的内部项目，并于2013年5月开源。更多精彩见<a href="https://reactjs.org/" title="React 官网" target="_blank" rel="noopener">React 官网</a></p>
 <a id="more"></a>
-<p><strong>React 核心特色</strong></p>
-<ul>
-<li>声明式渲染</li>
-</ul>
-<p>先来说明一下<strong>命令式编程</strong>和<strong>声明式编程</strong>：<br><strong>命令式编程关注怎么做</strong>，通俗点说就是我们通过一行一行代码让机器照着一步一步的去做。例如我有一个数组，然后想通过它得到每个值都是它的值两倍的数组：</p>
+<h3 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h3><p>先来说明一下<strong>命令式编程</strong>和<strong>声明式编程</strong>：<br><strong>命令式编程关注怎么做</strong>，通俗点说就是我们通过一行一行代码让机器照着一步一步的去做。例如我有一个数组，然后想通过它得到每个值都是它的值两倍的数组：</p>
 <pre><code>const originArr = [1,2,3]; // 原始数组
 const resultArr = []; // 定义一个空数组
 for(let i = 0;i &lt; originArr.length;i++){ // 遍历原始数组，然后将每个值乘于2之后添加到空数组中
@@ -488,15 +484,192 @@ const resultArr = originArr.map(item =&gt; item * 2); // 遍历数组由map方�
 </code></pre><p>那么react的声明式渲染体现在什么地方呢？简单点说就是react独创的<strong>JSX</strong>语法，一种把html和js结合起来的成果，例如：</p>
 <pre><code>const title = &lt;h3&gt;This is a title&lt;/h3&gt; ; 
 </code></pre><p>上述代码中<code>&lt;h3&gt;This is a title&lt;/h3&gt;</code> 既非html也非字符串，我们可以叫它react element，实际上它在被react渲染成真实DOM之前只是一个普通的js对象，后面会有介绍。<br>React使用JSX语法让我们只需要是关注我们想要做什么，输入的state或者props，输出的UI界面，而不用分心关注于原生的DOM操作。</p>
+<h3 id="组件化"><a href="#组件化" class="headerlink" title="组件化"></a>组件化</h3><p>在React中一切皆组件，组件是React中最基本的单元结构。大到整个页面，小到一个按钮或者弹窗都可以成为一个组件。</p>
+<h3 id="可移植性强"><a href="#可移植性强" class="headerlink" title="可移植性强"></a>可移植性强</h3><p>React不仅可以在web端使用，它还可以借助nodejs在server端渲染，还可以借助 React Native 开发移动端应用。</p>
+<h2 id="使用React"><a href="#使用React" class="headerlink" title="使用React"></a>使用React</h2><p>React并不强制开发者在项目中完全使用或者完全不用，所以我们可是尝试性的在项目的某个部分使用React，也可以完整的使用React完成项目。</p>
+<h3 id="局部使用React"><a href="#局部使用React" class="headerlink" title="局部使用React"></a>局部使用React</h3><p>可以在html中通过script标签引入react框架的CDN链接：</p>
+<pre><code>&lt;script src=&quot;https://unpkg.com/react@16/umd/react.production.min.js&quot; crossorigin&gt;&lt;/script&gt;
+&lt;script src=&quot;https://unpkg.com/react-dom@16/umd/react-dom.production.min.js&quot; crossorigin&gt;&lt;/script&gt;
+</code></pre><p>这是React官方给出的CDN 链接，考虑到网络问题，我们可以自由选择其他的可靠资源，或者下载之后上传并使用自己的CDN服务。完整的Demo请参考 <a href="https://gist.github.com/gaearon/6668a1f6986742109c00a581ce704605" title="局部使用React" target="_blank" rel="noopener">局部使用React</a></p>
+<p><strong>如果想使用JSX，需要额外引入，详情请见<a href="http://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project" title="引入JSX" target="_blank" rel="noopener">引入JSX</a></strong></p>
+<h3 id="完整使用React"><a href="#完整使用React" class="headerlink" title="完整使用React"></a>完整使用React</h3><p>基于React的框架也有不少，下面这几个是官方推荐使用的：</p>
 <ul>
-<li>组件化</li>
+<li>创建一个SPA，使用<a href="https://github.com/facebook/create-react-app#create-react-app-" title="Create React App" target="_blank" rel="noopener">Create React App</a></li>
+<li>如果想使用react+nodejs创建后端渲染（SSR）应用，可以使用<a href="https://nextjs.org/" title="Next.js" target="_blank" rel="noopener">Next.js</a></li>
+<li>创建一个静态页面网站，可以使用<a href="https://www.gatsbyjs.org/" title="Gatsby" target="_blank" rel="noopener">Gatsby</a></li>
 </ul>
-<p>在React中一切皆组件，组件是React中最基本的单元结构。大到整个页面，小到一个按钮或者弹窗都可以成为一个组件。</p>
+<pre><code>npx create-react-app my-app
+cd my-app
+npm start
+</code></pre><p>可以通过上面的命令行完成使用creat react app来创建一个react 应用。</p>
+<h2 id="JSX语法"><a href="#JSX语法" class="headerlink" title="JSX语法"></a>JSX语法</h2><pre><code>const el = (
+    &lt;div className=&quot;box&quot; customizeProp=&quot;test&quot;&gt;
+        &lt;button onClick={handleClick}&gt;Click me&lt;/button&gt;
+    &lt;/div&gt;
+)
+
+const el = React.createElement(
+    &apos;div&apos;,
+    {className: &apos;box&apos;,customizeProp:&apos;test&apos;},
+    React.createElement(
+        &apos;button&apos;,
+        {onClick:handleClick},
+        &apos;Click me&apos;
+    )
+);
+</code></pre><p>点语法：</p>
+<pre><code>const MyComponents = {
+    DatePicker: function DatePicker(props) {
+        return &lt;div&gt;Imagine a {props.color} datepicker here.&lt;/div&gt;;
+    }
+}
+
+function BlueDatePicker() {
+    return &lt;MyComponents.DatePicker color=&quot;blue&quot; /&gt;;
+}
+</code></pre><p>展开符属性写法：</p>
+<pre><code>function App2() {
+const props = {firstName: &apos;Ben&apos;, lastName: &apos;Hector&apos;};
+return &lt;Greeting {...props} /&gt;;
+}
+</code></pre><h2 id="react-lazy-load"><a href="#react-lazy-load" class="headerlink" title="react lazy load"></a>react lazy load</h2><pre><code>const OtherComponent = React.lazy(() =&gt; import(&apos;./OtherComponent&apos;));
+
+&lt;div&gt;
+  &lt;Suspense fallback={&lt;div&gt;Loading...&lt;/div&gt;}&gt;  // 组件加载过程中出现，类似传统loading效果
+    &lt;section&gt;
+      &lt;OtherComponent /&gt;
+    &lt;/section&gt;
+  &lt;/Suspense&gt;
+&lt;/div&gt;
+</code></pre><h2 id="context"><a href="#context" class="headerlink" title="context"></a>context</h2><pre><code>定义：
+const MyContext = React.createContext(defaultValue);
+
+使用：
+父组件或者以上：
+&lt;MyContext.Provider value={theme}&gt;
+    &lt;ThemedButton changeTheme={this.toggleTheme} /&gt;
+&lt;/MyContext.Provider&gt;
+子组件：
+class ThemedButton extends React.Component {
+    static contextType = MyContext;  // 1 与3的点操作符方式二选一
+    render() {
+        let props = this.props;
+        let theme = this.context;  // 2
+        return (
+        &lt;button
+            {...props}
+            style={{backgroundColor: theme.background}}
+        /&gt;
+        );
+        // 或者不使用1&amp;2或3&amp;2，使用Consumer，如果在一个组件里想使用多个context，只能使用Consumer+Provider，进行层层包裹
+        &lt;MyContext.Consumer&gt;
+        {(theme) =&gt; (
+            &lt;button
+                {...props}
+                style={{backgroundColor: theme.background}}
+            /&gt;
+        )}
+        &lt;/MyContext.Consumer&gt;
+    }
+}
+ThemedButton.contextType = MyContext; // 3
+
+export default ThemedButton;
+</code></pre><h2 id="error-boundary"><a href="#error-boundary" class="headerlink" title="error boundary"></a>error boundary</h2><pre><code>class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
+
+    static getDerivedStateFromError(error) {    // 1
+        // Update state so the next render will show the fallback UI.
+        return { hasError: true };
+    }
+
+    componentDidCatch(error, info) {     // 2
+        // You can also log the error to an error reporting service
+        logErrorToMyService(error, info);
+    }
+
+    render() {
+        if (this.state.hasError) {
+        // You can render any custom fallback UI
+        return &lt;h1&gt;Something went wrong.&lt;/h1&gt;;
+        }
+
+        return this.props.children; 
+    }
+}
+</code></pre><p>如果有1或者2或者同时存在，则为error boundary组件，用法如下：</p>
+<pre><code>&lt;ErrorBoundary&gt;
+    &lt;Children /&gt;
+&lt;/ErrorBoundary&gt;
+</code></pre><p>error boundary比较类似try{}catch(){}中catch代码块，另外需要注意的是<strong>只有class组件可以成为error boundary，函数组件是不行的，这主要是因为函数组件是不支持组件自有的state特性的</strong>。error boundary几乎可以捕捉到它的子组件任何地方和任何时候的错误，但下列情况的错误是捕捉不到的：</p>
 <ul>
-<li>可移植性强</li>
+<li>事件处理函数中错误（可以考虑使用try/catch进行错误捕捉）</li>
+<li>异步代码中错误</li>
+<li>后端渲染部分的错误</li>
+<li>以及error boundary自身的报错</li>
 </ul>
-<p>React不仅可以在web端使用，它还可以借助nodejs在server端渲染，还可以借助 React Native 开发移动端应用。</p>
-<h2 id="主要概念"><a href="#主要概念" class="headerlink" title="主要概念"></a>主要概念</h2>
+<h2 id="ref的传递"><a href="#ref的传递" class="headerlink" title="ref的传递"></a>ref的传递</h2><p>创建一个组件FancyButton，如果我们想要通过ref访问他的自组件button，</p>
+<pre><code>1. 通过createRef创建一个ref
+2. 将ref放入FancyButton的ref属性中
+3. FancyButton通过React.forwardRef将ref传递至button
+4. 此时当我们访问ref.current时将指向button
+
+const FancyButton = React.forwardRef((props, ref) =&gt; (   // 此处可使用function name(){}来代替匿名函数，以实现自定义函数名称
+    &lt;button ref={ref} className=&quot;FancyButton&quot;&gt;
+        {props.children}
+    &lt;/button&gt;
+));
+You can now get a ref directly to the DOM button:
+const ref = React.createRef();
+&lt;FancyButton ref={ref}&gt;
+    Click me!
+&lt;/FancyButton&gt;;
+</code></pre><p>在高阶组件中传递ref：</p>
+<pre><code>function logProps(Component) {
+    class LogProps extends React.Component {
+        componentDidUpdate(prevProps) {
+            console.log(&apos;old props:&apos;, prevProps);
+            console.log(&apos;new props:&apos;, this.props);
+        }
+
+        render() {
+            const {forwardedRef, ...rest} = this.props;
+
+            // Assign the custom prop &quot;forwardedRef&quot; as a ref
+            return &lt;Component ref={forwardedRef} {...rest} /&gt;;
+        }
+    }
+
+    // Note the second param &quot;ref&quot; provided by React.forwardRef.
+    // We can pass it along to LogProps as a regular prop, e.g. &quot;forwardedRef&quot;
+    // And it can then be attached to the Component.
+    return React.forwardRef((props, ref) =&gt; {
+        return &lt;LogProps {...props} forwardedRef={ref} /&gt;;
+    });
+}
+</code></pre><h2 id="Fragments"><a href="#Fragments" class="headerlink" title="Fragments"></a>Fragments</h2><ul>
+<li>可以单独从react中引用：import {Fragment} from ‘react’</li>
+<li>也可以不单独引用， <code>&lt;React.Fragment&gt;&lt;Children /&gt;&lt;/React.Fragment&gt;</code></li>
+<li>还可以使用简写语法 <code>&lt;&gt;&lt;Children /&gt;&lt;/&gt;</code></li>
+</ul>
+<p>渲染出的结果将会是单纯的<code>&lt;Children /&gt;</code>,而不存在任何父元素</p>
+<h2 id="HOC（高阶组件）"><a href="#HOC（高阶组件）" class="headerlink" title="HOC（高阶组件）"></a>HOC（高阶组件）</h2><p>定义： 一个函数，接受一个react组件作为参数，并且返回一个react组件，这个函数就称为高阶组件，<strong>高阶组件是一个纯函数，他不会改变作为参数的组件</strong></p>
+<pre><code>function logProps(WrappedComponent) {
+    return class extends React.Component {
+        componentWillReceiveProps(nextProps) {
+            console.log(&apos;Current props: &apos;, this.props);
+            console.log(&apos;Next props: &apos;, nextProps);
+        }
+        render() {
+            // Wraps the input component in a container, without mutating it. Good!
+            return &lt;WrappedComponent {...this.props} /&gt;;
+        }
+    }
+}
+</code></pre>
       
     </div>
     
@@ -746,7 +919,7 @@ const resultArr = originArr.map(item =&gt; item * 2); // 遍历数组由map方�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要概念"><span class="nav-number">2.</span> <span class="nav-text">主要概念</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#声明式渲染"><span class="nav-number">1.1.</span> <span class="nav-text">声明式渲染</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件化"><span class="nav-number">1.2.</span> <span class="nav-text">组件化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可移植性强"><span class="nav-number">1.3.</span> <span class="nav-text">可移植性强</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用React"><span class="nav-number">2.</span> <span class="nav-text">使用React</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#局部使用React"><span class="nav-number">2.1.</span> <span class="nav-text">局部使用React</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#完整使用React"><span class="nav-number">2.2.</span> <span class="nav-text">完整使用React</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSX语法"><span class="nav-number">3.</span> <span class="nav-text">JSX语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#react-lazy-load"><span class="nav-number">4.</span> <span class="nav-text">react lazy load</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#context"><span class="nav-number">5.</span> <span class="nav-text">context</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#error-boundary"><span class="nav-number">6.</span> <span class="nav-text">error boundary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ref的传递"><span class="nav-number">7.</span> <span class="nav-text">ref的传递</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fragments"><span class="nav-number">8.</span> <span class="nav-text">Fragments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HOC（高阶组件）"><span class="nav-number">9.</span> <span class="nav-text">HOC（高阶组件）</span></a></li></ol></div>
             
 
           </div>
@@ -780,7 +953,7 @@ const resultArr = originArr.map(item =&gt; item * 2); // 遍历数组由map方�
     
       <span class="post-meta-item-text">站点字数统计&#58;</span>
     
-    <span title="站点字数统计">1.9k 字</span>
+    <span title="站点字数统计">3.2k 字</span>
   
 </div>
 
