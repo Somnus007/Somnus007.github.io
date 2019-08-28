@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-21T09:25:25.577Z</updated>
+  <updated>2019-08-28T05:39:04.241Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,11 +21,12 @@
     <link href="http://yoursite.com/2019/08/21/JS%E6%8C%89%E4%BD%8D%E6%93%8D%E4%BD%9C%E7%AC%A6/"/>
     <id>http://yoursite.com/2019/08/21/JS按位操作符/</id>
     <published>2019-08-21T09:19:45.000Z</published>
-    <updated>2019-08-21T09:25:25.577Z</updated>
+    <updated>2019-08-28T05:39:04.241Z</updated>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;JS按位操作符（Bitwise-operators）&quot;&gt;&lt;a href=&quot;#JS按位操作符（Bitwise-operators）&quot; class=&quot;headerlink&quot; title=&quot;JS按位操作符（Bitwise operators）&quot;&gt;&lt;/a&gt;JS按位操作符（Bitwise operators）&lt;/h2&gt;&lt;h3 id=&quot;做什么的？&quot;&gt;&lt;a href=&quot;#做什么的？&quot; class=&quot;headerlink&quot; title=&quot;做什么的？&quot;&gt;&lt;/a&gt;做什么的？&lt;/h3&gt;&lt;p&gt;将其操作数（operands）当作 &lt;strong&gt;&lt;code&gt;32位的比特序列&lt;/code&gt;&lt;/strong&gt;（由0和1组成）, 按位操作符操作数字的二进制形式，但是返回值依然是标准的JavaScript数值。&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/2019/08/21/JS按位操作符/bitwise.jpg&quot; alt=&quot;Alt JavaScript Bitwise&quot; title=&quot;JavaScript 位操作符&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;JS按位操作符（Bitwise-operators）&quot;&gt;&lt;a href=&quot;#JS按位操作符（Bitwise-operators）&quot; class=&quot;headerlink&quot; title=&quot;JS按位操作符（Bitwise operators）&quot;&gt;&lt;/a&gt;JS按位操作符（Bitwise operators）&lt;/h2&gt;&lt;h3 id=&quot;做什么的？&quot;&gt;&lt;a href=&quot;#做什么的？&quot; class=&quot;headerlink&quot; title=&quot;做什么的？&quot;&gt;&lt;/a&gt;做什么的？&lt;/h3&gt;&lt;p&gt;将其操作数（operands）当作 &lt;strong&gt;&lt;code&gt;32位的比特序列&lt;/code&gt;&lt;/strong&gt;（由0和1组成）, 按位操作符操作数字的二进制形式，但是返回值依然是标准的JavaScript数值。&lt;/p&gt;
 &lt;p&gt;所有的按位操作符的操作数都会被转成补码（two’s complement）形式的有符号32位整数。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;32位的比特序列&lt;/li&gt;
