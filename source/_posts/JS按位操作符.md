@@ -6,6 +6,8 @@ tags:
     - 语言
 ---
 
+![Alt JavaScript Bitwise](JS按位操作符/bitwise.jpg "JavaScript 位操作符")
+
 ## JS按位操作符（Bitwise operators）
 
 ### 做什么的？
